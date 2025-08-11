@@ -1,0 +1,17 @@
+{
+    "name": "salar/user",
+    "description": "user svc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "salarmotevalli",
+            "email": "salar.mo.ro@gmail.com"
+        }
+    ],
+    "require": {}
+}
