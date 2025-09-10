@@ -18,7 +18,7 @@ interface IUserRepo {
      * @param string $email
      * @return User
      */
-    public function getByEmail(string $email): User;
+    public function getByEmail(string $email): ?User;
 
     /**
      * @param User $user

@@ -6,6 +6,8 @@ use App\Contract\Param\AuthenticationParam\LoginRequest;
 use App\Contract\Param\AuthenticationParam\LoginResult;
 use App\Contract\Param\AuthenticationParam\RegisterRequest;
 use App\Contract\Param\AuthenticationParam\RegisterResult;
+use App\Contract\Param\AuthenticationParam\VerifyResult;
+use App\Entity\User;
 
 interface IAuthenticationSvc
 {
@@ -22,8 +24,14 @@ interface IAuthenticationSvc
     public function register(RegisterRequest $request): RegisterResult;
 
     /**
+     * @param User $user
      * @return void
      */
-    public function logout(): void;
+    public function logout(User $user): void;
 
+    /**
+     * @param User $user
+     * @return bool
+     */
+    public function verify(string $token, User $user): VerifyResult;
 }

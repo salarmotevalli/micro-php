@@ -2,7 +2,11 @@
 
 namespace App\Contract\Param\AuthenticationParam;
 
-class LoginResult
+readonly class LoginResult
 {
-
+    public function __construct(
+        public string $accessToken,
+    )
+    {   
+    }
 }
